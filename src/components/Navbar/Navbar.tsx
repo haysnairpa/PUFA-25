@@ -15,9 +15,9 @@ export default function Navbar() {
     ]
     return (
         <header className="flex justify-center mt-2">
-                <nav className="flex gap-[2rem] absolute py-[1.2rem] px-[2rem] border border-black rounded-lg">
+                <nav className="flex gap-[2rem] absolute py-[1.2rem] px-[2rem] bg-black shadow-xl rounded-xl transition-all duration-300 hover:scale-105">
                     {links.map((link) => 
-                        <a key={link.title} href={link.href} className="">
+                        <a key={link.title} href={link.href} className="text-white">
                             {link.title}
                         </a>
                     )}
