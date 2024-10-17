@@ -1,7 +1,9 @@
+import TextReveal from '@/components/Aceternity/TextReveal';
+
 export default function NewsPage() {
     return (
         <section>
-            <div>News</div>
+            <TextReveal />
         </section>
     )
 }

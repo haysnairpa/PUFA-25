@@ -4,21 +4,21 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import Image from 'next/image';
-import TextGenerate from '@/components/TextGenerate';
-import HeroParallax  from '@/components/HeroParallax';
+import TextGenerate from '@/components/Aceternity/TextGenerate';
+import HeroParallax  from '@/components/Aceternity/HeroParallax';
 import Divider from '@/components/Divider';
 
 export default function Home() {
     useEffect(() => {
         AOS.init({
-            duration: 1000,
+            duration: 1000,   
             once: true
         });
     }, []);
 
   return (
     <>
-      <section className="h-screen px-[10rem] py-[5rem] flex justify-center items-center">
+      <section className="h-screen px-[5rem] md:px-[10rem] py-[5rem] flex justify-center items-center">
         <div data-aos="fade-down" className="flex flex-col items-center justify-center text-center">
           <h1 data-aos="fade-down" className="font-[900] text-[5rem] md:text-[10rem] m-0 tracking-widest -z-10">PUFA 25.</h1>
           <h1 className=" italic m-0">Be Strong, One Determination.</h1>
@@ -37,7 +37,7 @@ export default function Home() {
         <Divider bgColor="bg-neutral-200" className=""/> 
       </div>
 
-      <section className="h-[300vh] px-[10rem] py-[5rem] flex justify-center items-center">
+      <section className="h-[250vh] flex justify-center items-center">
         <HeroParallax /> 
       </section>
     </>

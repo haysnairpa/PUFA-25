@@ -102,8 +102,8 @@ export default function EventPage() {
     }, []);
 
   return (
-    <section className="flex flex-col items-center justify-start min-h-screen pt-32 md:pt-40 px-4">
-      <div className="mb-20 text-center">
+    <section className="h-screen px-[5rem] md:px-[10rem] py-[5rem] flex flex-col justify-center items-center gap-[4rem] mb-[10rem]">
+      <div className="text-center mt-[10rem]">
         <h1 data-aos="fade-down" className="text-4xl md:text-7xl font-[900] mb-6">Computing Events</h1>
         <TextGenerateEffect
           words="Discover the latest updates on events in our faculty."
@@ -111,7 +111,7 @@ export default function EventPage() {
         />
       </div>
       
-      <div className="w-full max-w-7xl">
+      <div className="w-full max-w-7xl  ">
         <ExpandableCardDemo cards={events} />
       </div>
     </section>

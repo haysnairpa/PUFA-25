@@ -1,9 +1,9 @@
-import Divider from "./Divider"
+import Divider from "@/components/Divider"
 
 export default function Footer() {
     return (
         <footer className="container flex justify-center">
-            <div className="w-[80%] bg-black text-white rounded-lg px-[2rem] md:px-[5rem] py-[2rem]">
+            <div className="w-[80%] bg-black text-white rounded-lg px-[2rem] md:px-[5rem] py-[3rem]">
                 <div>
                     <div>
                     <h1 className="font-[600]">SUBSCRIBE TO OUR NEWSLETTER</h1>    
