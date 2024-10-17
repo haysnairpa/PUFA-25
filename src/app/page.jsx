@@ -37,7 +37,7 @@ export default function Home() {
         <Divider bgColor="bg-neutral-200" className=""/> 
       </div>
 
-      <section className="h-[250vh] py-[5rem] flex justify-center items-center">
+      <section className="h-[300vh] px-[10rem] py-[5rem] flex justify-center items-center">
         <HeroParallax /> 
       </section>
     </>

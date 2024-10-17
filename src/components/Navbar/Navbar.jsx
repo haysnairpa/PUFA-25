@@ -1,5 +1,5 @@
 import Image from "next/image"
-import logo from "../../assets/pufa-computing-logo.png"
+import logo from "/public/assets/pufa-computing-logo.png"
 
 export default function Navbar() {
 
