@@ -9,9 +9,9 @@ export default function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "PUFA-25",
-    link: "/",
-    thumbnail: "/assets/background-example.JPG",
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
     title: "Aceternity UI",
@@ -19,9 +19,9 @@ export const products = [
     thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
-    title: "PUFA-25",
-    link: "/",
-    thumbnail: "/assets/background-example.JPG",
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
     title: "Aceternity UI",
@@ -29,9 +29,9 @@ export const products = [
     thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
-    title: "PUFA-25",
-    link: "/",
-    thumbnail: "/assets/background-example.JPG",
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
     title: "Aceternity UI",
@@ -39,13 +39,19 @@ export const products = [
     thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
-    title: "PUFA-25",
-    link: "/",
-    thumbnail: "/assets/background-example.JPG",
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
     title: "Aceternity UI",
     link: "https://ui.aceternity.com",
     thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
+  {
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+  },
+
 ];
