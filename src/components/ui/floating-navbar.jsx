@@ -62,7 +62,7 @@ export const FloatingNav = ({
           </Link>
         ))}
 
-        <div className="relative bg-white w-20 h-20 rounded-full flex justify-center items-center -my-4 shadow-md border-2 border-black">
+        <div className="relative bg-white w-20 h-20 rounded-full flex justify-center items-center -my-4 shadow-md ">
           <Image src="/assets/pufa-computing-logo.png" alt="PUFA Computing Logo" width={50} height={50} />
         </div>
 
