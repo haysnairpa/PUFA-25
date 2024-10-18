@@ -7,6 +7,7 @@ import Image from 'next/image';
 import TextGenerate from '@/components/Aceternity/TextGenerate';
 import HeroParallax  from '@/components/Aceternity/HeroParallax';
 import Divider from '@/components/Divider';
+import ImageSlider from '@/components/Aceternity/ImageSlider';
 
 export default function Home() {
     useEffect(() => {
@@ -39,6 +40,14 @@ export default function Home() {
 
       <section className="h-[250vh] flex justify-center items-center">
         <HeroParallax /> 
+      </section>
+
+      <div className="px-[10rem] py-[5rem]">
+        <Divider bgColor="bg-neutral-200" className=""/> 
+      </div>
+
+      <section className="h-screen flex justify-center items-center">
+        <ImageSlider/>
       </section>
     </>
 
