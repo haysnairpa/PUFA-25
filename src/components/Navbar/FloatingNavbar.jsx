@@ -2,6 +2,7 @@
 import React from "react";
 import { FloatingNav } from "../ui/floating-navbar";
 import { IconHome, IconCalendarEvent, IconNews, IconDotsCircleHorizontal } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function FloatingNavDemo() {
   const navItems = [
@@ -30,9 +31,11 @@ export default function FloatingNavDemo() {
   return (
     <div className="relative w-full">
       <FloatingNav navItems={navItems} />
-      <button className="fixed top-5 right-5 bg-white text-black px-4 py-2 rounded-full shadow-md">
-        Login
-      </button>
+      <Link href="/auth/login">
+        <button className="fixed top-5 right-5 bg-white text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300">
+          Login
+        </button>
+      </Link>
     </div>
   );
 }
