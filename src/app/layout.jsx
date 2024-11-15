@@ -12,8 +12,6 @@ const karla = Karla({
     dispaly: "swap",
 })
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="select-none">

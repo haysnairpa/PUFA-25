@@ -34,21 +34,21 @@ export default function Home() {
         </div>
       </section>
       
-      <div className="px-[10rem] py-[5rem]">
+      {/* <div className="px-[10rem] py-[5rem]">
         <Divider bgColor="bg-neutral-200" className=""/> 
-      </div>
+      </div> */}
 
-      <section className="h-[250vh] flex justify-center items-center">
+      {/* <section className="h-[250vh] flex justify-center items-center">
         <HeroParallax /> 
-      </section>
+      </section> */}
 
-      <div className="px-[10rem] py-[5rem]">
+      {/* <div className="px-[10rem] py-[5rem]">
         <Divider bgColor="bg-neutral-200" className=""/> 
-      </div>
+      </div> */}
 
-      <section className="h-screen flex justify-center items-center">
+      {/* <section className="h-screen flex justify-center items-center">
         <ImageSlider/>
-      </section>
+      </section> */}
     </>
 
   )

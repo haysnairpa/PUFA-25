@@ -32,7 +32,7 @@ export default function FloatingNavDemo() {
     <div className="relative w-full">
       <FloatingNav navItems={navItems} />
       <Link href="/auth/login">
-        <button className="fixed top-5 right-5 bg-white text-black px-4 py-2 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300">
+        <button className="fixed top-5 right-5 bg-white border text-black px-[2rem] py-2 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300">
           Login
         </button>
       </Link>
