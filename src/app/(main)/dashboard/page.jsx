@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { BarChart3, Calendar, FileText, Home, Menu, User, X } from 'lucide-react'
 import Link from "next/link"
-import DashboardLayout from "./layout"
 
 export default function Page() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
