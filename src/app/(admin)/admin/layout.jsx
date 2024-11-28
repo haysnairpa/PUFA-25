@@ -5,19 +5,17 @@ import { ThemeProvider } from "@material-tailwind/react";
 
 const karla = Karla({
     subsets: ['latin'],
-    dispaly: "swap",
+    display: "swap",
 })
 
-export default function RootLayout({ children }) {
+export default function AdminLayout({ children }) {
   return (
-    <html lang="en" className="select-none">
-      <body
-        className={karla.className} 
-      >
-        <ThemeProvider>
-        {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <div className={karla.className}>
+      <ThemeProvider>
+        <div className="flex flex-col min-h-screen">
+          {children}
+        </div>
+      </ThemeProvider>
+    </div>
   );
 }

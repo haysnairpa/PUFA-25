@@ -1,18 +1,21 @@
 "use client"
 
 import { Karla } from "next/font/google";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const karla = Karla({
     subsets: ['latin'],
-    dispaly: "swap",
+    display: "swap",
 })
 
-export default function RootLayout({ children }) {
+export default function AuthLayout({ children }) {
   return (
-    <>
-    <section>
-        {children}
-    </section>
-    </>
+    <div className={karla.className}>
+      <ThemeProvider>
+        <div className="flex flex-col min-h-screen">
+          {children}
+        </div>
+      </ThemeProvider>
+    </div>
   );
 }
