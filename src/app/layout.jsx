@@ -16,17 +16,22 @@ const karla = Karla({
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const isDashboardPage = pathname?.includes('/dashboard');
+  const isAdminPage = pathname?.includes('/admin');
+  const shouldShowNav = !isDashboardPage && !isAdminPage;
 
   return (
     <html lang="en" className="select-none">
+      <head>
+        <link rel="icon" href="/assets/pufa-computing-logo.png" />
+      </head>
       <body className={karla.className}>
         <ThemeProvider>
           <div className="flex flex-col min-h-screen">
-            {!isDashboardPage && <FloatingNavbar />}
+            {shouldShowNav && <FloatingNavbar />}
             <main className="flex-grow">
               {children}
             </main>
-            {!isDashboardPage && <Footer />}
+            {shouldShowNav && <Footer />}
           </div>
         </ThemeProvider>
       </body>
