@@ -1,206 +1,208 @@
-"use client";
+"use client"
 
 import { useState } from "react";
-import {
-  Card,
-  CardBody,
-  Progress,
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
-import {
-  FiAward,
-  FiBarChart2,
-  FiCalendar,
-  FiCheckCircle,
-  FiClock,
-  FiFolder,
-  FiTrendingUp,
-} from "react-icons/fi";
+import { FiCalendar, FiMessageCircle, FiClock, FiCheck, FiX } from "react-icons/fi";
 
-export default function ReportsPage() {
-  const [activeTab, setActiveTab] = useState("achievements");
+export default function Reports() {
+  const [activeTab, setActiveTab] = useState("events");
 
-  // Sample data - replace with real data later
-  const achievements = [
+  // Sample data - replace with actual data from your backend
+  const events = [
     {
       id: 1,
-      title: "Hackathon Winner",
-      event: "President University Hackathon 2023",
-      date: "Dec 2023",
-      type: "Competition",
-      badge: "🏆 First Place",
+      title: "Computing Workshop: Web Development",
+      date: "2024-02-15",
+      time: "13:00 - 15:00",
+      location: "Room 503",
+      status: "attended",
+      category: "Workshop"
     },
     {
       id: 2,
-      title: "Best Project Award",
-      event: "Computing Exhibition 2023",
-      date: "Nov 2023",
-      type: "Project",
-      badge: "🌟 Excellence",
+      title: "Guest Speaker: AI in Modern World",
+      date: "2024-02-10",
+      time: "10:00 - 12:00",
+      location: "Auditorium",
+      status: "attended",
+      category: "Seminar"
     },
+    {
+      id: 3,
+      title: "Computing Club Meeting",
+      date: "2024-02-05",
+      time: "15:00 - 16:00",
+      location: "Room 501",
+      status: "missed",
+      category: "Meeting"
+    }
   ];
 
-  const activities = {
-    events: {
-      total: 15,
-      attended: 12,
-      upcoming: 3,
+  const aspirations = [
+    {
+      id: 1,
+      title: "Improve Lab Equipment",
+      date: "2024-02-14",
+      status: "in-progress",
+      category: "Facility",
+      description: "Request for new computers in Lab 503 for better performance during practical sessions."
     },
-    projects: {
-      total: 8,
-      completed: 6,
-      ongoing: 2,
+    {
+      id: 2,
+      title: "Additional Programming Workshop",
+      date: "2024-02-08",
+      status: "completed",
+      category: "Academic",
+      description: "Suggestion to conduct more programming workshops for first-year students."
     },
-    skills: [
-      { name: "Web Development", progress: 85 },
-      { name: "UI/UX Design", progress: 75 },
-      { name: "Mobile Development", progress: 60 },
-      { name: "Data Science", progress: 70 },
-    ],
+    {
+      id: 3,
+      title: "Extended Lab Hours",
+      date: "2024-02-01",
+      status: "pending",
+      category: "Facility",
+      description: "Request to extend computer lab operating hours during final projects period."
+    }
+  ];
+
+  const getStatusColor = (status) => {
+    const colors = {
+      'attended': 'bg-green-100 text-green-800',
+      'missed': 'bg-red-100 text-red-800',
+      'completed': 'bg-green-100 text-green-800',
+      'in-progress': 'bg-blue-100 text-blue-800',
+      'pending': 'bg-yellow-100 text-yellow-800'
+    };
+    return colors[status] || 'bg-gray-100 text-gray-800';
   };
 
-  const stats = [
-    {
-      title: "Event Participation",
-      value: "80%",
-      icon: FiCalendar,
-      description: "12 out of 15 events attended",
-      trend: "up",
-      color: "blue",
-    },
-    {
-      title: "Project Completion",
-      value: "75%",
-      icon: FiFolder,
-      description: "6 out of 8 projects completed",
-      trend: "up",
-      color: "green",
-    },
-    {
-      title: "Average Performance",
-      value: "A",
-      icon: FiTrendingUp,
-      description: "Based on project evaluations",
-      trend: "up",
-      color: "purple",
-    },
-  ];
-
   return (
-    <div className="p-6">
-      {/* Header */}
+    <div className="p-6 max-w-7xl mx-auto">
+      {/* Header Section */}
       <div className="mb-8">
-        <h1 className="text-2xl font-semibold text-gray-900 mb-2">Activity Reports</h1>
-        <p className="text-gray-600">Track your progress and achievements</p>
+        <h1 className="text-2xl font-semibold text-gray-900">Reports</h1>
+        <p className="mt-1 text-sm text-gray-500">
+          View your event participation history and submitted aspirations
+        </p>
       </div>
 
-      {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {stats.map((stat, index) => (
-          <Card key={index} className="overflow-hidden">
-            <CardBody className="p-4">
-              <div className="flex items-center gap-4">
-                <div className={`rounded-full p-3 bg-${stat.color}-50`}>
-                  <stat.icon className={`h-6 w-6 text-${stat.color}-500`} />
-                </div>
+      {/* Statistics Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="bg-white rounded-xl shadow-sm p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm text-gray-500">Total Events</p>
+              <p className="text-2xl font-semibold mt-1">{events.length}</p>
+            </div>
+            <div className="bg-blue-100 p-3 rounded-lg">
+              <FiCalendar className="w-6 h-6 text-blue-600" />
+            </div>
+          </div>
+          <div className="mt-4 flex items-center text-sm text-gray-500">
+            <FiCheck className="w-4 h-4 mr-1 text-green-500" />
+            <span>{events.filter(e => e.status === 'attended').length} attended</span>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm text-gray-500">Aspirations</p>
+              <p className="text-2xl font-semibold mt-1">{aspirations.length}</p>
+            </div>
+            <div className="bg-purple-100 p-3 rounded-lg">
+              <FiMessageCircle className="w-6 h-6 text-purple-600" />
+            </div>
+          </div>
+          <div className="mt-4 flex items-center text-sm text-gray-500">
+            <FiClock className="w-4 h-4 mr-1 text-blue-500" />
+            <span>{aspirations.filter(a => a.status === 'in-progress').length} in progress</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Tab Navigation */}
+      <div className="flex space-x-4 mb-6">
+        <button
+          onClick={() => setActiveTab('events')}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-150 ${
+            activeTab === 'events'
+              ? 'bg-blue-50 text-blue-600'
+              : 'text-gray-600 hover:bg-gray-50'
+          }`}
+        >
+          Events History
+        </button>
+        <button
+          onClick={() => setActiveTab('aspirations')}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-150 ${
+            activeTab === 'aspirations'
+              ? 'bg-blue-50 text-blue-600'
+              : 'text-gray-600 hover:bg-gray-50'
+          }`}
+        >
+          My Aspirations
+        </button>
+      </div>
+
+      {/* Content */}
+      {activeTab === 'events' ? (
+        <div className="space-y-4">
+          {events.map((event) => (
+            <div key={event.id} className="bg-white rounded-xl shadow-sm p-6">
+              <div className="flex items-start justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-600">{stat.title}</p>
-                  <h3 className="text-2xl font-bold text-gray-900">{stat.value}</h3>
+                  <h3 className="font-medium text-gray-900">{event.title}</h3>
+                  <div className="mt-2 space-y-2">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <FiCalendar className="w-4 h-4 mr-2" />
+                      <span>{event.date} • {event.time}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <FiMessageCircle className="w-4 h-4 mr-2" />
+                      <span>{event.location}</span>
+                    </div>
+                  </div>
                 </div>
+                <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(event.status)}`}>
+                  {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
+                </span>
               </div>
-              <p className="text-sm text-gray-600 mt-4 flex items-center gap-1">
-                {stat.trend === "up" && <FiTrendingUp className="text-green-500" />}
-                {stat.description}
-              </p>
-            </CardBody>
-          </Card>
-        ))}
-      </div>
-
-      {/* Detailed Reports */}
-      <Tabs value={activeTab} onChange={(value) => setActiveTab(value)}>
-        <TabsHeader>
-          <Tab value="achievements">
-            <div className="flex items-center gap-2">
-              <FiAward className="h-4 w-4" />
-              Achievements
+              <div className="mt-4">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                  {event.category}
+                </span>
+              </div>
             </div>
-          </Tab>
-          <Tab value="progress">
-            <div className="flex items-center gap-2">
-              <FiBarChart2 className="h-4 w-4" />
-              Progress
-            </div>
-          </Tab>
-        </TabsHeader>
-        <TabsBody>
-          <TabPanel value="achievements" className="p-0">
-            <div className="grid gap-4">
-              {achievements.map((achievement) => (
-                <Card key={achievement.id} className="overflow-hidden">
-                  <CardBody className="p-4">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                          {achievement.title}
-                        </h3>
-                        <p className="text-sm text-gray-600 mb-2">{achievement.event}</p>
-                        <div className="flex items-center gap-2 text-sm text-gray-500">
-                          <FiClock className="h-4 w-4" />
-                          {achievement.date}
-                        </div>
-                      </div>
-                      <span className="px-3 py-1 text-sm font-medium bg-blue-50 text-blue-700 rounded-full">
-                        {achievement.badge}
-                      </span>
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {aspirations.map((aspiration) => (
+            <div key={aspiration.id} className="bg-white rounded-xl shadow-sm p-6">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="font-medium text-gray-900">{aspiration.title}</h3>
+                  <p className="mt-2 text-sm text-gray-500">{aspiration.description}</p>
+                  <div className="mt-4">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <FiCalendar className="w-4 h-4 mr-2" />
+                      <span>Submitted on {aspiration.date}</span>
                     </div>
-                  </CardBody>
-                </Card>
-              ))}
-            </div>
-          </TabPanel>
-          <TabPanel value="progress" className="p-0">
-            <div className="grid gap-6">
-              {/* Event Progress */}
-              <Card className="overflow-hidden">
-                <CardBody className="p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Event Participation</h3>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
-                      <FiCheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-sm font-medium">Attended Events</span>
-                    </div>
-                    <span className="text-sm text-gray-600">{activities.events.attended} of {activities.events.total}</span>
                   </div>
-                  <Progress value={(activities.events.attended / activities.events.total) * 100} color="green" />
-                </CardBody>
-              </Card>
-
-              {/* Skills Progress */}
-              <Card className="overflow-hidden">
-                <CardBody className="p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Skills Development</h3>
-                  <div className="space-y-4">
-                    {activities.skills.map((skill, index) => (
-                      <div key={index}>
-                        <div className="flex justify-between mb-1">
-                          <span className="text-sm font-medium text-gray-700">{skill.name}</span>
-                          <span className="text-sm text-gray-600">{skill.progress}%</span>
-                        </div>
-                        <Progress value={skill.progress} color="blue" />
-                      </div>
-                    ))}
-                  </div>
-                </CardBody>
-              </Card>
+                </div>
+                <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(aspiration.status)}`}>
+                  {aspiration.status.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                </span>
+              </div>
+              <div className="mt-4">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                  {aspiration.category}
+                </span>
+              </div>
             </div>
-          </TabPanel>
-        </TabsBody>
-      </Tabs>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

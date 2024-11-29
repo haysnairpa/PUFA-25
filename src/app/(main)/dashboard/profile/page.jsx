@@ -134,7 +134,7 @@ export default function Dashboard() {
 
             <form onChange={handleFormChange} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium mb-1">
                   Username <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -146,7 +146,7 @@ export default function Dashboard() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium mb-1">
                     First Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -157,8 +157,8 @@ export default function Dashboard() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Middle Name <span className="text-gray-400">(optional)</span>
+                  <label className="block text-sm font-medium mb-1">
+                    Middle Name <span className="text-gray-400">*</span>
                   </label>
                   <input
                     type="text"
@@ -168,7 +168,7 @@ export default function Dashboard() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium mb-1">
                   Last Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -179,7 +179,7 @@ export default function Dashboard() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium mb-1">
                   Email Address <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -187,6 +187,38 @@ export default function Dashboard() {
                   defaultValue="muhamad.apriansyah@student.president.ac.id"
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  Date of Birth <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="date"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ colorScheme: 'light' }}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  Gender <span className="text-red-500">*</span>
+                </label>
+                <select
+                  defaultValue="Male"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white"
+                >
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+
+              <div className="flex justify-end">
+                <button
+                  className="px-8 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors duration-150"
+                >
+                  Save
+                </button>
               </div>
             </form>
           </div>

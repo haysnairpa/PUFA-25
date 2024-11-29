@@ -44,7 +44,7 @@ export default function ProjectsPage() {
     // Add more projects as needed
   ];
 
-  const filters = ["All", "Informatics", "Information Systems", "Data Science"];
+  const filters = ["All", "Informatics", "Information Systems"];
 
   const filteredProjects = projects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
