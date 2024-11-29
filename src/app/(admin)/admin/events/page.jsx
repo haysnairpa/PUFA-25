@@ -32,8 +32,8 @@ export default function EventsPage() {
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-gray-800">Events</h1>
-          <p className="text-gray-500">Manage and monitor all events</p>
+          <h1 className="text-3xl font-bold text-gray-900">Events</h1>
+          <p className="text-base text-gray-600 mt-1">Manage and monitor all events in your organization.</p>
         </div>
         <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
           <FiPlus className="w-5 h-5" />
@@ -59,10 +59,10 @@ export default function EventsPage() {
           <table className="w-full">
             <thead>
               <tr className="bg-gray-50 border-b border-gray-200">
-                <th className="text-left py-4 px-6 text-sm font-semibold text-gray-600">Event</th>
-                <th className="text-left py-4 px-6 text-sm font-semibold text-gray-600">Date</th>
-                <th className="text-left py-4 px-6 text-sm font-semibold text-gray-600">Status</th>
-                <th className="text-left py-4 px-6 text-sm font-semibold text-gray-600">Action</th>
+                <th className="text-left py-4 px-6 text-sm font-bold text-gray-700">Event</th>
+                <th className="text-left py-4 px-6 text-sm font-bold text-gray-700">Date</th>
+                <th className="text-left py-4 px-6 text-sm font-bold text-gray-700">Status</th>
+                <th className="text-left py-4 px-6 text-sm font-bold text-gray-700">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -79,19 +79,14 @@ export default function EventsPage() {
                         />
                       </div>
                       <div>
-                        <h3 className="font-medium text-gray-900">{event.title}</h3>
-                        <p className="text-sm text-gray-500">{event.organization}</p>
-                        <p className="text-sm text-gray-500 line-clamp-1 max-w-md mt-1">
-                          {event.description}
-                        </p>
+                        <div className="font-semibold text-gray-900">{event.title}</div>
+                        <div className="text-sm text-gray-600">{event.description}</div>
                       </div>
                     </div>
                   </td>
                   <td className="py-4 px-6">
-                    <div className="text-sm">
-                      <p className="text-gray-900">{event.startDate}</p>
-                      <p className="text-gray-500">to {event.endDate}</p>
-                    </div>
+                    <div className="text-sm font-medium text-gray-900">{event.startDate}</div>
+                    <div className="text-sm text-gray-600">to {event.endDate}</div>
                   </td>
                   <td className="py-4 px-6">
                     <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
