@@ -185,7 +185,7 @@ export default function Home() {
                   We are attempting to be a bridge for the Computing Faculty in a more positive way by growing together with us.
                 </p>
                 <Link 
-                  href="/cabinet"
+                  href="/cabinet/anagata"
                   className="inline-flex items-center mt-6 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
                 >
                   See our Cabinet
