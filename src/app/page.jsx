@@ -159,7 +159,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-[1px] w-20 bg-green-500"></div>
-              <h2 className="text-4xl md:text-6xl font-[900]">Cabinet 2023/2024</h2>
+              <h2 className="text-4xl md:text-6xl font-[900]">Cabinet 2024/2025</h2>
               <div className="h-[1px] w-20 bg-green-500"></div>
             </div>
           </div>
@@ -167,8 +167,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="w-full max-w-md mx-auto">
               <Image 
-                src="/assets/anagata.png"
-                alt="Anagata Cabinet"
+                src="/assets/forcasion.png"
+                alt="forcasion Cabinet"
                 width={500}
                 height={500}
                 className="w-full h-auto"
@@ -177,15 +177,15 @@ export default function Home() {
 
             <div className="space-y-6">
               <div className="bg-white dark:bg-neutral-800 p-8 rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-bold mb-4">ANAGATA CABINET</h3>
-                <p className="text-lg font-semibold text-green-600 dark:text-green-400 mb-4">
+                <h3 className="text-2xl font-bold mb-4">FORCASION CABINET</h3>
+                <p className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-black via-yellow-700 to-yellow-900 mb-4">
                   "One Team, One Vision, One for Computing"
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
                   We are attempting to be a bridge for the Computing Faculty in a more positive way by growing together with us.
                 </p>
                 <Link 
-                  href="/cabinet/anagata"
+                  href="/cabinet/forcasion"
                   className="inline-flex items-center mt-6 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
                 >
                   See our Cabinet

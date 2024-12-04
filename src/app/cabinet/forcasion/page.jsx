@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function AnagataCabinet() {
+export default function forcasionCabinet() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Section */}
@@ -34,8 +34,8 @@ export default function AnagataCabinet() {
                 className="relative"
               >
                 <Image
-                  src="/assets/anagata.png"
-                  alt="Anagata Cabinet"
+                  src="/assets/forcasion.png"
+                  alt="forcasion Cabinet"
                   width={240}
                   height={240}
                   className="mx-auto drop-shadow-[0_0_15px_rgba(255,215,0,0.3)]"
@@ -48,7 +48,7 @@ export default function AnagataCabinet() {
               transition={{ delay: 0.3, duration: 0.5 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500">
-                ANAGATA CABINET
+                FORCASION CABINET
               </h1>
               <p className="text-2xl text-yellow-500/90 font-medium">
                 "Be Strong, One Determination"
@@ -84,7 +84,7 @@ export default function AnagataCabinet() {
               <div className="absolute inset-0 bg-gradient-to-b from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
               <div className="w-32 h-32 mb-6 relative group">
                 <Image
-                  src="/assets/anagata.png"
+                  src="/assets/forcasion.png"
                   alt="Letter A"
                   width={128}
                   height={128}
@@ -93,7 +93,7 @@ export default function AnagataCabinet() {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-yellow-400">Letter "A"</h3>
               <p className="text-gray-300 text-center">
-                Our letter "A" represents our cabinet name "Anagata"
+                Our letter "A" represents our cabinet name "forcasion"
               </p>
             </motion.div>
 
@@ -106,7 +106,7 @@ export default function AnagataCabinet() {
               <div className="absolute inset-0 bg-gradient-to-b from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
               <div className="w-32 h-32 mb-6 relative group">
                 <Image
-                  src="/assets/anagata.png"
+                  src="/assets/forcasion.png"
                   alt="Bridge"
                   width={128}
                   height={128}
@@ -128,7 +128,7 @@ export default function AnagataCabinet() {
               <div className="absolute inset-0 bg-gradient-to-b from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
               <div className="w-32 h-32 mb-6 relative group">
                 <Image
-                  src="/assets/anagata.png"
+                  src="/assets/forcasion.png"
                   alt="Sun"
                   width={128}
                   height={128}
@@ -156,7 +156,9 @@ export default function AnagataCabinet() {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Vision & Mission</span>
             <div className="absolute w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
           </motion.h2>
+
           <div className="grid md:grid-cols-2 gap-12">
+            {/* Vision */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -165,31 +167,83 @@ export default function AnagataCabinet() {
             >
               <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Vision</h3>
               <p className="text-gray-300 leading-relaxed text-lg">
-                PUFA Computing is striving to develop its human resources by providing KM Computing
-                more experience, progressive, professional, and leading to become a strong bridge to a future
-                that is full of challenges.
+                To create a united, communicative, and competitive faculty where students from all departments actively participate in academic and non-academic activities and are fully supported in achieving their highest potential.
               </p>
             </motion.div>
 
+            {/* Missions */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className="bg-black p-10 rounded-2xl shadow-lg hover:shadow-yellow-500/10 transition-shadow border border-yellow-500/20"
             >
-              <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Mission</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-4">
-                  <div className="w-3 h-3 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full"></div>
-                  <span className="text-gray-300 text-lg">Providing the best forum for self-development</span>
+              <h3 className="text-2xl font-semibold mb-6 text-yellow-400">Missions</h3>
+              <ul className="space-y-8">
+                {/* Solidify */}
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-4xl font-bold text-yellow-500">S</span>
+                    <div>
+                      <h4 className="text-lg font-semibold text-yellow-400 mb-2">Solidify</h4>
+                      <p className="text-gray-300">Enhance Solidarity and Cohesion Across Departments</p>
+                      <p className="text-gray-400 text-sm mt-1">Appoint CML as intermediaries between students and the student organizations to ensure effective communication and collaboration.</p>
+                    </div>
+                  </div>
                 </li>
-                <li className="flex items-center space-x-4">
-                  <div className="w-3 h-3 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full"></div>
-                  <span className="text-gray-300 text-lg">Creating a conducive and productive atmosphere</span>
+
+                {/* Communicate */}
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-4xl font-bold text-yellow-500">C</span>
+                    <div>
+                      <h4 className="text-lg font-semibold text-yellow-400 mb-2">Communicate</h4>
+                      <p className="text-gray-300">Improve Effective Communication</p>
+                      <p className="text-gray-400 text-sm mt-1">Utilize CML to facilitate the flow of information between students and various student organizations.</p>
+                    </div>
+                  </div>
                 </li>
-                <li className="flex items-center space-x-4">
-                  <div className="w-3 h-3 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full"></div>
-                  <span className="text-gray-300 text-lg">Supporting future innovation and development</span>
+
+                {/* Organize */}
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-4xl font-bold text-yellow-500">O</span>
+                    <div>
+                      <h4 className="text-lg font-semibold text-yellow-400 mb-2">Organize</h4>
+                      <p className="text-gray-300">Encourage Participation in Academic and Non-Academic Activities</p>
+                      <ul className="text-gray-400 text-sm mt-1 list-disc list-inside space-y-1">
+                        <li>Conduct interest and talent surveys to identify suitable activities and competitions.</li>
+                        <li>Form support teams or mentors to help students prepare for academic and non-academic competitions.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                {/* Participate */}
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-4xl font-bold text-yellow-500">P</span>
+                    <div>
+                      <h4 className="text-lg font-semibold text-yellow-400 mb-2">Participate</h4>
+                      <p className="text-gray-300">Provide Support and Motivation to Students</p>
+                      <p className="text-gray-400 text-sm mt-1">Offer regular awards for outstanding students in academic and non-academic fields and publicize their achievements to motivate others.</p>
+                    </div>
+                  </div>
+                </li>
+
+                {/* Encourage */}
+                <li>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-4xl font-bold text-yellow-500">E</span>
+                    <div>
+                      <h4 className="text-lg font-semibold text-yellow-400 mb-2">Encourage</h4>
+                      <p className="text-gray-300">Encourage Participation and Support Student Activities</p>
+                      <ul className="text-gray-400 text-sm mt-1 list-disc list-inside space-y-1">
+                        <li>Promote active involvement in both academic and non-academic events through competition.</li>
+                        <li>Create platforms for students to showcase their talents and achievements, fostering a culture of participation and excellence.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </motion.div>
@@ -213,52 +267,52 @@ export default function AnagataCabinet() {
             {[
               {
                 name: "Board of Director",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Strategic leadership and decision-making"
               },
               {
                 name: "Research & Technology",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Innovation and technical advancement"
               },
               {
                 name: "Student Development & Competition",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Growth and learning initiatives"
               },
               {
                 name: "External Relations",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Relationship building and networking"
               },
               {
                 name: "Internal Relations",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Collaboration and cooperation within the organization"
               },
               {
                 name: "Entrepreneurship",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Entrepreneurship development and entrepreneurship training"
               },
               {
                 name: "Art and Sports",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Creative content and design"
               },
               {
                 name: "Communication",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Communication and collaboration"
               },
               {
                 name: "Multimedia",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Multimedia content and design"
               },
               {
                 name: "Student Walfare Advocacy",
-                icon: "/assets/anagata.png",
+                icon: "/assets/forcasion.png",
                 desc: "Advocacy for student welfare"
               }
             ].map((div, index) => (

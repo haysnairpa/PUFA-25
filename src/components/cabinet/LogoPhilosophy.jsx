@@ -2,47 +2,60 @@ import Image from 'next/image';
 
 export default function LogoPhilosophy() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-black text-yellow-500">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Filosofi Logo</h2>
+        <h2 className="text-4xl font-bold text-center mb-16">Logo Philosophy</h2>
         
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2">
-            <Image
-              src="/images/logo.png"
-              alt="Logo PUFA"
-              width={400}
-              height={400}
-              className="mx-auto"
-            />
-          </div>
-          
-          <div className="md:w-1/2">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Bentuk</h3>
-                <p className="text-gray-600">
-                  Desain logo menggabungkan elemen modern yang mencerminkan teknologi
-                  dengan sentuhan klasik yang melambangkan kebijaksanaan.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Warna</h3>
-                <p className="text-gray-600">
-                  Penggunaan warna mencerminkan semangat, profesionalisme,
-                  dan inovasi yang menjadi nilai-nilai utama organisasi.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Makna</h3>
-                <p className="text-gray-600">
-                  Setiap elemen dalam logo memiliki makna yang mendalam,
-                  mewakili visi, misi, dan nilai-nilai yang kami junjung tinggi.
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Letter A Section */}
+          <div className="bg-black border border-yellow-500 rounded-lg p-6 flex flex-col items-center text-center">
+            <div className="mb-6">
+              <Image
+                src="/images/forcasion-logo.png"
+                alt="Forcasión Logo"
+                width={200}
+                height={200}
+                className="mx-auto"
+              />
             </div>
+            <h3 className="text-2xl font-bold mb-4">Letter "A"</h3>
+            <p className="text-gray-300">
+              Our letter "A" represents our cabinet name "forcasion"
+            </p>
+          </div>
+
+          {/* Bridge & Standard Section */}
+          <div className="bg-black border border-yellow-500 rounded-lg p-6 flex flex-col items-center text-center">
+            <div className="mb-6">
+              <Image
+                src="/images/forcasion-logo.png"
+                alt="Forcasión Logo"
+                width={200}
+                height={200}
+                className="mx-auto"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4">Bridge & Standard</h3>
+            <p className="text-gray-300">
+              A bridge means PUFA Computing acts as a connector
+            </p>
+          </div>
+
+          {/* Sun Section */}
+          <div className="bg-black border border-yellow-500 rounded-lg p-6 flex flex-col items-center text-center">
+            <div className="mb-6">
+              <Image
+                src="/images/forcasion-logo.png"
+                alt="Forcasión Logo"
+                width={200}
+                height={200}
+                className="mx-auto"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4">Sun</h3>
+            <p className="text-gray-300">
+              The symbol sun represents a bright future
+            </p>
           </div>
         </div>
       </div>
